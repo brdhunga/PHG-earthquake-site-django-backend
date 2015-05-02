@@ -6,5 +6,9 @@ urlpatterns = patterns('',
     # url(r'^$', 'django_donation.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    #front page
+    url(r'^$', 'faq_about_app.views.home', name='home'),
+
+
     url(r'^admin/', include(admin.site.urls)),
 )

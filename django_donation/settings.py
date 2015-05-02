@@ -26,7 +26,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = (
 
     #custom apps
     'website_settings',
+    'faq_about_app',
+    'home_app',
 )
 
 MIDDLEWARE_CLASSES = (
