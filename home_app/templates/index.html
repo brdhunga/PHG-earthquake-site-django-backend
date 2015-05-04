@@ -1,3 +1,41 @@
-<h1>This is index for cheking </h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This is it</title>
+    <script src="http://localhost:8004/angular.js" type="text/javascript"></script>
+    <script src="http://localhost:8004/angular-resource.js"></script>
+</head>
+<body ng-app="randoApp" >
+<p>Man this is shit</p>
 
-<link href="style.css">
+<div ng-app="randoApp" ng-controller="mainCtrl as main">
+    <p>{{ main.namme }}</p>
+</div>
+
+
+
+<script>
+    angular.module('randoApp', ['ngResource']);
+
+    angular.module('randoApp')
+    .controller('mainCtrl', function($http){
+
+        var url = "http://localhost:8001/api/home";
+        var url2 = "http://127.0.0.1:8001/api/home";
+        
+        $http.get(url2).
+          success(function(data) {
+            console.log(JSON.stringify(data));
+          }).
+          error(function (data) {
+            console.log("request failed");
+          });
+        
+    });
+
+    
+
+
+</script>
+</body>
+</html>
