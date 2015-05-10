@@ -27,7 +27,7 @@ class Progress(models.Model):
         '''
         if not self.pk or self.slug=='':
             self.created_at = datetime.datetime.today()
-            self.slug = slugify(self.title)
+            self.slug = slugify(self.title)[:55]
         self.updated_at = datetime.datetime.today() 
         return super(Progress, self).save(*args, **kwargs)
 

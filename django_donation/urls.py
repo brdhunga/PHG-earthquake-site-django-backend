@@ -35,6 +35,14 @@ urlpatterns = patterns('',
         'progress_app.views.progress_single_api',
         name='api.progress_single'
         ),
+    url(r'^api/events/$',
+        'gallery_app.views.event_api',
+        name='api.events'
+        ),
+    url(r'^api/events/(?P<slug>[\w-]+)/$',
+        'gallery_app.views.event_single_api',
+        name='api.single_event'
+        ),
 
     url(r'^admin/', include(admin.site.urls)),
 )

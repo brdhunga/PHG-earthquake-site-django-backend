@@ -9,6 +9,8 @@ from home_app.serializer import HomeSerializer
 
 
 def home(request):
+    b = HttpResponse("<h1>This is great</h1>")
+    print(dir(b))
     return HttpResponse("<h1>This is great</h1>") 
 
 
